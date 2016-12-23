@@ -74,12 +74,14 @@
                     name: "Qrea",
                     qrea: true
                 },
+                /*
                 qreaVideo: {
                     active: false,
                     id: "qrea-video",
                     name: "Vidéo",
                     qrea: false
                 },
+                */
                 fonctionnalites: {
                     active: false,
                     id: "qrea-fonctionnalites",
@@ -90,11 +92,13 @@
                     id: "qrea-expert-comptable",
                     name: "Experts-Comptables"
                 },
+                /*
                 tarifs: {
                     active: false,
                     id: "qrea-tarifs",
                     name: "Tarifs"
                 },
+                */
                 equipe: {
                     active: false,
                     id: "qrea-equipe",
