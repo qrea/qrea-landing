@@ -1,0 +1,64 @@
+<div class="ui inverted vertical masthead center aligned segment cover-qrea">
+    <div class="ui text container">
+        <a href="#/">
+            <h1 style="display: inline" class="ui inverted qrea" style="padding:0.05em;margin-top:0em">Qrea</h1>
+        </a>
+        <!--<h1 style="display: inline" class="ui inverted">{{ title }}</h1>-->
+
+    </div>
+</div>
+
+<div class="ui vertical stripe segment">
+
+    <div class="ui container grid">
+
+        <div class="row">
+            <div class="column sixteen wide">
+                <div class="ui message warning">
+                    <h4>Avertissement</h4>
+                    <p>
+                        Qrea est accessible en version Beta. Les fonctionnalités sont susceptibles d'évoluer rapidement. La documentation utilisateur est en cours de rédaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="column sixteen wide mobile four wide computer tablet">
+
+                <div class="ui fluid vertical menu">
+
+                        <!--
+                        <div class="item">
+                            <div class="ui transparent icon input">
+                            <input type="text" placeholder="Rechercher">
+                            <i class="search icon"></i>
+                            </div>
+                        </div>
+                        -->
+
+                        <div ng-repeat="categorie in categories" class="item">
+                            <div class="header">{{ categorie.nom }}</div>
+                            <div class="menu">
+                                <a ng-click="selectSujet(sujet)" ng-repeat="sujet in categorie.sujets" class="item">{{ sujet.titreCourt }}</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="column twelve wide computer tablet sixteen wide mobile">
+                <div class="ui basic segment">
+                    <h2 ng-if="sujetSelected.titreLong" div class="ui header">{{ sujetSelected.titreLong }}</h2>
+                    <div class="" ng-include="sujetSelected.urlHTML"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div ng-include="'views/public/footer.html'"/>

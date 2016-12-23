@@ -1,0 +1,78 @@
+<!-- menu fixed -->
+<div id="menuPublic" class="ui large top fixed hidden borderless menu" style="visibility: hidden">
+
+    <div class="ui container minqrea">
+
+        <a ng-repeat="link in ctrl.links.linksOnePage" 
+            class="item" style="border: none" ng-class="{active: link.active, qrea: link.qrea}" ng-click="ctrl.linkOnPage_click(link)">{{ link.name }}</a>
+        
+        <div class="right menu">
+            <div ng-repeat="link in ctrl.rightLinks" class="item">
+                <a class="ui button" ng-href="{{ link.url }}" ng-class="{ primary: link.primary }">{{ link.name }}</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="ui inverted vertical masthead center aligned segment cover-qrea">
+
+    <div class="ui container">
+        <div class="ui large secondary inverted pointing menu minqrea" style="border: none">
+
+            
+            <a ng-repeat="link in ctrl.links.linksOnePage" class="item" ng-if="link.qrea" ng-click="ctrl.linkOnPage_click(link)" 
+                ng-class="{active: link.active || link.qrea, qrea: link.qrea}">{{ link.name }}</a>
+            
+
+            <div class="right item">
+                <a ng-repeat="link in ctrl.rightLinks" class="ui inverted button" ng-href="{{ link.url }}">{{ link.name }}</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ui container" ng-show="ctrl.banniereVisible" style="text-align:left;min-height:450px;">
+        
+
+        <img id="facture" style="margin-top:2em; box-shadow: 0px 1px 2px rgba(0,0,0,0.2); background-color:white" class="ui large bordered image right floated" src="assets/img/Facture 201600016.svg"/>
+            
+        <h1 class="ui inverted colored title-text" 
+            style="color: white; text-shadow: 0px 1px 2px rgba(0,0,0,0.12);padding:0.05em; padding-bottom: 0px;margin-top:2em;">
+            Entrepreneur,<br> simplifiez-vous la vie.
+        </h1>
+        
+        <h2 class="ui inverted .subtitle-text" style="color: white;text-shadow: 0px 1px 2px rgba(0,0,0,0.12); margin-top: 0;">Facturez simplement et gratuitement</h2>
+
+        <a ng-href="https://qrea.herokuapp.com/#/qrea/inscription" class="ui huge violet button">C'est parti !
+            <i class="right arrow icon"></i>
+        </a>         
+
+    </div>
+
+
+</div>
+
+<div style="clear:both"></div>
+
+<div class="ui container" ng-if="ctrl.isNavigateurObsolete">
+    <div class="ui dividing"></div>
+    <div class="ui negative message">
+        <div class="header">
+            <i class="ui icon warning sign"></i>
+            AVERTISSEMENT
+        </div>
+        <p>
+            Votre navigateur internet n'est pas suppporté par Qrea, nous vous recommandons
+            <a href="https://www.google.fr/chrome/browser" target="_blank">Google Chrome</a>
+            ou
+            <a href="https://www.mozilla.org/fr/firefox/new/" target="_blank">
+                Mozilla Firefox</a>.
+        </p>
+    </div>
+</div>
+
+<!-- page content -->
+<div ng-include="'views/public/home.html'"></div>
+
+<div ng-include="'views/public/footer.html'"/>

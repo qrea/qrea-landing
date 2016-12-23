@@ -1,0 +1,27 @@
+{
+  "name": "qrea.github.io",
+  "homepage": "https://github.com/qrea/qrea.github.io",
+  "authors": [
+    "Pierre BOURDU <pierre.bourdu@gmail.com>"
+  ],
+  "description": "Pages publique du site Qrea.io",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular-animate": "~1.4.6",
+    "angular-i18n": "~1.4.7",
+    "angular-file-dnd": "~1.0.4",
+    "angular-scroll": "^1.0.0",
+    "semantic": "~2.1.7",
+    "jquery": "^3.0.0"
+  }
+}
