@@ -1,0 +1,27 @@
+{
+  "name": "qrea.github.io",
+  "version": "1.1.0",
+  "description": "Landing page du SaaS Qrea",
+  "main": "index.js",
+  "dependencies": {
+    "lite-server": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrea/qrea.github.io.git"
+  },
+  "keywords": [
+    "Qrea"
+  ],
+  "author": "Pierre BOURDU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qrea/qrea.github.io/issues"
+  },
+  "homepage": "https://github.com/qrea/qrea.github.io#readme"
+}
